@@ -1,0 +1,28 @@
+{
+  "name": "bootstrap-test",
+  "version": "0.0.0",
+  "description": "just a simple bootstrap test project",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jermi/bootstrap-test.git"
+  },
+  "keywords": [
+    "test",
+    "bootstrap"
+  ],
+  "author": "kkoziel",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/jermi/bootstrap-test/issues"
+  },
+  "homepage": "https://github.com/jermi/bootstrap-test",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.7.1",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-cssmin": "~0.7.0"
+  }
+}

@@ -4,7 +4,7 @@ function Test2() {
 
     this.alert = function () {
         alert("Test2 " + this.c + this.d);
-    }
+    };
 }
 
 var test2 = new Test2();
