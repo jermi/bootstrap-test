@@ -1,0 +1,18 @@
+.icon-img1 {
+  background-image: url(../compressed/img.png);
+  background-position: -259px 0px;
+  width: 300px;
+  height: 168px;
+}
+.icon-img2 {
+  background-image: url(../compressed/img.png);
+  background-position: 0px -194px;
+  width: 300px;
+  height: 168px;
+}
+.icon-img3 {
+  background-image: url(../compressed/img.png);
+  background-position: 0px 0px;
+  width: 259px;
+  height: 194px;
+}
