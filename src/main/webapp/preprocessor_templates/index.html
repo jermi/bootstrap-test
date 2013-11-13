@@ -11,7 +11,17 @@
     <!-- CSS
     ================================================== -->
 
+    <!-- @if NODE_ENV == 'DEVELOPMENT' -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/jumbotron.css" rel="stylesheet">
+    <link href="css/moje.css" rel="stylesheet">
+    <!-- @endif -->
+
+    <!-- @if NODE_ENV == 'PRODUCTION' -->
     <link href="compressed/style.css" rel="stylesheet">
+    <!-- @endif -->
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -85,5 +95,15 @@
 <!-- JavaScript
 ================================================== -->
 
+<!-- @if NODE_ENV == 'DEVELOPMENT' -->
+<script src="js/lib/jquery-1.10.2.js"></script>
+<script src="js/lib/bootstrap.js"></script>
+<script src="js/lib/require.js"></script>
+<script src="js/main.js"></script>
+<!-- @endif -->
+
+<!-- @if NODE_ENV == 'PRODUCTION' -->
 <script src="compressed/script.js"></script>
+<!-- @endif -->
+
 </body></html>
