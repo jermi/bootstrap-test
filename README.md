@@ -9,5 +9,6 @@ Requirements:
 How to run:
 -----------
 1.  **npm install** 
-2.  **grunt prod** (for development use '***dev***')
-3.  **mvn tomcat:run**
+2.  **npm install -g grunt-cli**
+3.  **grunt prod** (for development use '***dev***')
+4.  **mvn tomcat:run**
