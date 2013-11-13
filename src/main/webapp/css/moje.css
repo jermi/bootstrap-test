@@ -4,8 +4,10 @@
 
 .moje {
     color: #ffe730;
+    text-shadow: 0 0 2px black;
 }
 
 .moje2 {
     color: green;
+    text-shadow: 0 0 1px;
 }
