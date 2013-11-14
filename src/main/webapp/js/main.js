@@ -3,6 +3,6 @@ require.config({
     baseUrl: "js"
 });
 
-require(['test1', 'test2'], function () {
+require(['test1', 'test2', 'assist/navi'], function () {
     console.log("scripts loaded");
 });

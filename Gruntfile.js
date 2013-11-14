@@ -18,10 +18,10 @@ module.exports = function (grunt) {
             },
             build: {
                 src: [
-                    'src/main/webapp/js/lib/require.js',
-                    'src/main/webapp/js/main.js', // RequireJS entry point
                     'src/main/webapp/js/lib/jquery-1.10.2.js',
                     'src/main/webapp/js/lib/bootstrap.js',
+                    'src/main/webapp/js/lib/require.js',
+                    'src/main/webapp/js/main.js', // RequireJS entry point
                     'src/main/webapp/js/**/*.js'
                 ],
                 dest: 'src/main/webapp/compressed/script.js'

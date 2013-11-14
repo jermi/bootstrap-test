@@ -50,7 +50,7 @@
     <div class="container">
         <h1>Hello, world!</h1>
         <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button" onclick="test1.loadAriaTable('tableContainerId')">Learn more</a></p>
     </div>
 </div>
 
@@ -59,18 +59,18 @@
     <div class="row">
         <div class="col-md-4">
             <h2>Heading</h2>
-            <p class="moje">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-default" href="#" role="button" onclick="test1.alert()">View details »</a></p>
+            <p id="p1" class="moje" tabindex="-1" onblur="navi.assistedFocus(event, 'p2');">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-default" href="#" role="button" onclick="test1.alert()" tabindex="-1">View details »</a></p>
         </div>
         <div class="col-md-4">
             <h2>Heading</h2>
-            <p class="moje2">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-default" href="#" role="button" onclick="test2.alert()">View details »</a></p>
+            <p id="p2" class="moje2" tabindex="-1" onblur="navi.assistedFocus(event, 'p3');">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-default" href="#" role="button" onclick="test2.alert()" tabindex="-1">View details »</a></p>
         </div>
         <div class="col-md-4">
             <h2>Heading</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-default" href="#" role="button" onclick="">View details »</a></p>
+            <p id="p3" tabindex="-1" onblur="navi.assistedFocus(event, 'p1');">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p><a class="btn btn-default" href="#" role="button" onclick="" tabindex="-1">View details »</a></p>
         </div>
     </div>
 	<div class="row">
@@ -90,7 +90,11 @@
             <p><div class="icon-img3"></div></p>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-1" id="tableContainerId" tabindex="-1">
 
+        </div>
+    </div>
     <hr>
 
     <footer>		
