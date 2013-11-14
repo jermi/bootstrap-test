@@ -60,7 +60,7 @@ module.exports = function (grunt) {
 				destImg: 'src/main/webapp/compressed/img.png',
 				destCSS: 'src/main/webapp/css/img.css',
 			    'algorithm': 'binary-tree',
-				'engine': 'phantomjs'
+				'engine': 'gm'
 			}
 		},
 		clean: [
