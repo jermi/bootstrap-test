@@ -1,8 +1,6 @@
-// RequireJS configuration
-require.config({
-    baseUrl: "js"
-});
-
-require(['test1', 'test2', 'assist/navi'], function () {
-    console.log("scripts loaded");
-});
+define('main',
+    ['test1', 'test2', 'assist/navi', 'bootstrap', 'pack1/pack1a/mod1a'],
+    function () {
+        console.log("scripts loaded");
+    }
+);

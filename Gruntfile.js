@@ -11,20 +11,20 @@ module.exports = function (grunt) {
                 ]
             }
         },
-        uglify: {
-            options: {
-                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
-                report: 'min'
-            },
-            build: {
-                src: [
-                    'src/main/webapp/js/lib/jquery-1.10.2.js',
-                    'src/main/webapp/js/lib/bootstrap.js',
-                    'src/main/webapp/js/lib/require.js',
-                    'src/main/webapp/js/main.js', // RequireJS entry point
-                    'src/main/webapp/js/**/*.js'
-                ],
-                dest: 'src/main/webapp/compressed/script.js'
+        requirejs: {
+            compile: {
+                options: {
+                    baseUrl: "src/main/webapp/js",
+                    mainConfigFile: "src/main/webapp/js/config.js",
+                    name: "main",
+                    out: "src/main/webapp/compressed/script.js",
+                    optimize: "uglify",
+                    paths: {
+                        requirejs: 'lib/require'
+                    },
+                    include: ["requirejs"],
+                    insertRequire: ['main']
+                }
             }
         },
         cssmin: {
@@ -77,11 +77,12 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-preprocess'); // processes page to use compressed or not compressed resources
 	grunt.loadNpmTasks('grunt-spritesmith');
 	grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-requirejs');
 
     // tasks
     grunt.registerTask('default', ['jshint']);
     grunt.registerTask('dev', ['jshint', 'env:dev', 'preprocess:dev']);
-    grunt.registerTask('prod', ['jshint', 'env:prod', 'preprocess:prod', 'uglify', 'cssmin']);
+    grunt.registerTask('prod', ['jshint', 'env:prod', 'preprocess:prod', 'requirejs:compile', 'cssmin']);
 	grunt.registerTask('img', ['clean', 'sprite']);
 
 };

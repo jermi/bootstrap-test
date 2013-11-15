@@ -1,4 +1,4 @@
-define("test1", [], function () {
+define("test1", ['jquery'], function (jquery) {
     function Test1() {
         this.a = "A";
         this.b = "B";
@@ -9,7 +9,7 @@ define("test1", [], function () {
 
         this.loadAriaTable = function (containerId) {
             $.get("aria_table.html", function (data) {
-                var container = $("#" + containerId);
+                var container = jquery("#" + containerId);
                 container.html(data);
                 container.focus();
             });
